@@ -50,8 +50,6 @@ sub rot13Phrase {
         	# the alphabet.
         	$vi_lNum = ord( $vs_letter );
 
-                #print( $vs_letter . " => " . $vi_lNum . "\n" );
-                #print( $vi_lNum . " <= " . chr( $vi_lNum + 64 ) . "\n" );
                 if( $vi_lNum >= 65 && $vi_lNum <= 90 ){
 			$vi_lNum = $vi_lNum - 64;
 			$vi_lNum = calculRot13( $vi_lNum );
@@ -64,7 +62,6 @@ sub rot13Phrase {
 		}
 		
 		push( @vt_pConverted, chr( $vi_lNum ));
-		#push( @vt_pConverted, $vi_lNum . " " );
 
 	}
 	
@@ -76,7 +73,6 @@ my @tableTemp = rot13Phrase( $vs_lToConvert );
 
 
 print( @tableTemp );
-#print( "\n" . $vs_lToConvert . "\n" );
 
 
 print( "\n" );
